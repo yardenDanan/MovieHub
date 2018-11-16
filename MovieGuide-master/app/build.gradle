@@ -70,6 +70,7 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:${supportLibVersion}"
     implementation "com.android.support.test.espresso:espresso-idling-resource:${espressoVersion}"
     implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.1'
 
     // Rx
     implementation 'io.reactivex.rxjava2:rxjava:2.1.2'
