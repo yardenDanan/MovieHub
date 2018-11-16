@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "713406982320",
+    "firebase_url": "https://moviehub-20393.firebaseio.com",
+    "project_id": "moviehub-20393",
+    "storage_bucket": "moviehub-20393.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713406982320:android:a8d268d9b20417e7",
+        "android_client_info": {
+          "package_name": "com.YardenAvihai.moviehub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713406982320-vdcdptlv6u0r4r7a8kkde4ebof9fq5d6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVsqlAReMu1VuX7_9VFIqEQjxxIN0o23Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

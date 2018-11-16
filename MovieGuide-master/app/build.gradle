@@ -62,7 +62,6 @@ ext {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     //Support
     implementation "com.android.support:design:${supportLibVersion}"
     implementation "com.android.support:support-v4:${supportLibVersion}"
@@ -70,6 +69,7 @@ dependencies {
     implementation "com.android.support:palette-v7:${supportLibVersion}"
     implementation "com.android.support:recyclerview-v7:${supportLibVersion}"
     implementation "com.android.support.test.espresso:espresso-idling-resource:${espressoVersion}"
+    implementation 'com.google.firebase:firebase-core:16.0.1'
 
     // Rx
     implementation 'io.reactivex.rxjava2:rxjava:2.1.2'
@@ -115,3 +115,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test:rules:1.0.1'
 }
+apply plugin: 'com.google.gms.google-services'
