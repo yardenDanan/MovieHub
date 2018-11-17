@@ -19,6 +19,8 @@ import com.YardenAvihai.moviehub.details.MovieDetailsFragment;
 import com.YardenAvihai.moviehub.Movie;
 import com.YardenAvihai.moviehub.util.RxUtils;
 import com.YardenAvihai.moviehub.util.EspressoIdlingResource;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.jakewharton.rxbinding2.support.v7.widget.RxSearchView;
 import java.util.concurrent.TimeUnit;
 import io.reactivex.disposables.Disposable;
@@ -28,13 +30,16 @@ public class MoviesListingActivity extends AppCompatActivity implements MoviesLi
     public static final String DETAILS_FRAGMENT = "DetailsFragment";
     private boolean twoPaneMode;
     private Disposable searchViewTextSubscription;
+    private FirebaseAuth firebaseAuth;
+    private FirebaseUser currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        firebaseAuth = FirebaseAuth.getInstance();
+        currentUser = firebaseAuth.getCurrentUser();
         setToolbar();
-
         if (findViewById(R.id.movie_details_container) != null) {
             twoPaneMode = true;
 
@@ -53,7 +58,11 @@ public class MoviesListingActivity extends AppCompatActivity implements MoviesLi
         setSupportActionBar(toolbar);
 
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(R.string.movie_guide);
+            String welcomeMessage = "";
+            if(currentUser != null){
+                welcomeMessage = String.format("Welcome %s",currentUser.getEmail());
+            }
+            getSupportActionBar().setTitle(welcomeMessage);
             getSupportActionBar().setDisplayShowTitleEnabled(true);
         }
     }
