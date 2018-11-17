@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textColorHint="#fff"
+            android:layout_marginVertical="20dp"
             android:layout_marginBottom="8dp">
             <EditText
                 android:id="@+id/input_email"
@@ -42,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textColorHint="#fff"
+            android:layout_marginVertical="20dp"
             android:layout_marginBottom="8dp">
             <EditText android:id="@+id/input_password"
                 android:layout_width="match_parent"
@@ -55,11 +57,11 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="45dp"
             android:padding="12dp"
             android:text="Login"
             android:textColor="#fff"
-            android:background="#faa243" />
+            android:background="@color/colorAccent"/>
 
         <TextView android:id="@+id/link_signup"
             android:layout_width="fill_parent"
